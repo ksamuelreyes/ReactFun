@@ -5,17 +5,25 @@ import teams from '../public/CollegeBasketballTeams.json'
 
 
 const TeamNames = teams["teams"]
-
+//Welcome & Description
 function Welcome(){
   return (
   <div className='centertext'>
-  <h1>College Teams</h1>
-  <h2>Welcome to the college basketball team database</h2>
+  <h1>Welcome</h1>
+  <h2>NCAA Basketball Team database</h2>
   </div>
   );
 }
 
+function Description(){
+  return (
+  <div className='centertext'>
+      <p>The college basketball team database includes NCAA basketball teams and information about them. Explore the cards below to learn more about your favorite teams.</p>
+  </div>
+  );
+}
 
+//Returns each team
 class Team extends React.Component <any,any> {
   render() {
     
@@ -32,7 +40,7 @@ class Team extends React.Component <any,any> {
     )
   }
 }
-
+//Returns team list
 function TeamList() {
   return (
     <div className='cards'>
@@ -45,6 +53,7 @@ function App(){
   return(
     <div>
     <Welcome/>
+    <Description/>
     <TeamList/>
     </div>
   );
